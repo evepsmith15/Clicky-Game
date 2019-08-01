@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; 
 import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
 import cards from "./cards.json";
 import "./App.css";
 
-class App extends Component {
+class App extends Component { //holds the cards, score and highscore for the game
   state = {
     cards,
     score: 0,
@@ -26,7 +26,7 @@ class App extends Component {
     return true;
   }
 
-  clickCount = id => {
+  clickCount = id => { //what triggers the game
     this.state.cards.find((w, i) => {
       if (w.id === id) {
         if(cards[i].count === 0){
@@ -37,16 +37,16 @@ class App extends Component {
           this.state.cards.sort(() => Math.random() - 0.5)
           return true; 
         } else {
-          this.gameOver();
+          this.gameOver(); //pick wrong and its a game over 
         }
       }
     });
   }
 
-  render() {
+  render() { //This shows the title and all the other items from the card json
     return (
       <Wrapper>
-        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game</Header>
+        <Header score={this.state.score} highscore={this.state.highscore}>Fire Emblem Heroes (Clicky)</Header>
         {this.state.cards.map(card => (
           <Card
             clickCount={this.clickCount}

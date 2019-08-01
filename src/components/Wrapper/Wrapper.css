@@ -1,6 +1,9 @@
 .wrapper {
     padding-top: 50px;
-    background: #ECEFF1;
+    background-image: url("https://gamepedia.cursecdn.com/feheroes_gamepedia_en/thumb/d/df/Summon_Heroes_Stones.png/281px-Summon_Heroes_Stones.png?version=4f047fd4b5579086a1fd7f0953098b6b");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100%;
     display: flex;
     flex-flow: row wrap;
